@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+<body>
+    <div class="container">
+        <div class="form" id="Registration-form">
+            <h1><strong>Registration Form</strong></h1>
+            <form  action="/action_page.php"> 
+             <div id="Registrationform">
+                 <fieldset>
+                 <legend>Basic info</legend>
+                       <lable for="first name" id="first name">FIRST NAME</lable><br>
+                        <input type="name" placeholder="first name"maxlength="15"><br>
+                        <lable for="last name" id="last name">LAST NAME</lable><br>
+                        <input type="name" placeholder="last name" maxlength="15"><br>
+                        <lable for="gender" id="gender">GENDER</lable><pre>male<input type="radio" name="male" id="male">      female<input type="radio" name="female" id="female"></pre>
+                        <lable for="age" id="age">AGE</lable><br>
+                        <input type="date"><br> 
+                    </fieldset>
+                    
+                  <div id="Registrationform"><fieldset>
+                        <legend>Contract Details</legend> 
+                        <lable for="Email Id" id="email">EMAIL ID</lable><br>
+                        <input type="email" placeholder="enter your mail id" name="mail" id="email"><br>
+                        <lable for="mobile no" id="mob">MOBILE NO</lable><br>
+                        <input type="tel" placeholder="enter mobile no" name="mob" id="mob" maxlength="13">
+                        </fieldset>
+                     </div> 
+                         <div id="Registrationform"><fieldset>
+                         <legend>About</legend>
+                             <p>EDUCATION</p>
+                             <select id="most-like" name="mostLike" class="form-control" required="">
+                              <option disabled="" selected="" value="">Select an option</option>    
+                              <option value="sec">SEC</option>
+                              <option value="sr.sec">SR.SEC</option>
+                              <option value="none">NONE</option>
+                                </select>
+                                 <br>
+                                <lable for="describe" id="describe">DESCRIBE</lable><br>
+                                <textarea id="comments" class="input-textarea" name="comment" placeholder="describe yourself here..." maxlength="50" autocomplete="off" rows="6"></textarea><br>
+                                <p>KNOWN LANGAUGES</p>
+                                <lable><input type="checkbox" name="prefer" class="input-checkbox">JAVA</lable>
+                                <lable><input type="checkbox" name="prefer" class="input-checkbox">C</lable>
+                                <lable><input type="checkbox" name="prefer" class="input-checkbox">NODE</lable>
+                                <lable><input type="checkbox" name="prefer" class="input-checkbox">HTML</lable>
+                                <lable><input type="checkbox" name="prefer" class="input-checkbox">CSS</lable>
+                                <lable><input type="checkbox" name="prefer" class="input-checkbox">JAVA SCRIPT</lable>
+                                <lable><input type="checkbox" name="prefer" class="input-checkbox">PHP</lable>
+                                <lable><input type="checkbox" name="prefer" class="input-checkbox">REACT</lable>
+                            </fieldset>
+                           </div>
+                        <div id="submit-button">   
+                    <button type="submit" class="submit-button" id="submit">SUBMIT</button></div>               
+         
+                </form>
+            </div>
+        </div>
+     </div>
+</body>
+</html>
