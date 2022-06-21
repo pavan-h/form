@@ -8,59 +8,89 @@
     <title>Registration Form</title>
 </head>
 <body>
+    <main>
     <div class="container">
-        <div class="form" id="Registration-form">
-            <h1><strong>Registration Form</strong></h1>
-            <form  action="/action_page.php"> 
-             <div id="Registrationform">
-                 <fieldset>
-                 <legend>Basic info</legend>
-                       <lable for="first name" id="first name">FIRST NAME</lable><br>
-                        <input type="name" placeholder="first name"maxlength="15"><br>
-                        <lable for="last name" id="last name">LAST NAME</lable><br>
-                        <input type="name" placeholder="last name" maxlength="15"><br>
-                        <lable for="gender" id="gender">GENDER</lable><pre>male<input type="radio" name="male" id="male">      female<input type="radio" name="female" id="female"></pre>
-                        <lable for="age" id="age">AGE</lable><br>
-                        <input type="date"><br> 
-                    </fieldset>
+      <div class="form" id="Registration-form">
+       <h1><strong>Registration Form</strong></h1>
+         <form  action="/action_page.php"> 
+            <div id="Registrationform">
+              <div class="input-box"><input type="text"  maxlength="15" required="required" id="first-name"><span>First Name</span></div>
+                <br /> 
+                <div class="input-box"><input type="text"  maxlength="15" required="required" id="last-name"><span>Last Name</span> </div>
+                
+                <br />
+                <span class="gender">Gender</span>
+                <br />
+                <div class="radio">
+                  <input type="radio" name="gender" value="male" id="radio1" class="radio__input" id="male">
+                  <label for="male" class="radio__lable">Male</label>
+                  <input type="radio" name="gender" value="female" id="radio2" class="radio__input" id="Female">
+                  <lable for="female" class="radio__lable">Female</lable>
+               </div>
+                <br />
+                <div class="input-box"><lable for="age" id="age">
+                  <input type="date" name="dob" requiredpattern="\d{4}-\d{2}-\d{2}" required="required" id="age"><span>D.O.B</span></lable></div>
+                
+                <br />
+                <div class="input-box"><lable for="Email Id" id="email">
+                  <input type="email" name="mail" id="email" required="required" id="email" onkeydown="validation()"><span>EMAIL ID</span></lable></div>
+                
+                <br />
+                <div class="input-box"><lable for="mobile no" id="mob">
+                  <input type="tel" name="mob" id="mob" maxlength="13" required="required" id="mob"><span>Mobile No</span></lable></div>
+                
+                <br />
+                <div class="input-box">
+                  <select id="most-like" name="mostLike" class="form-control" required="required" id="education">
+                  
+                  <option disabled="" selected="" value="">Select an option</option>    
+                  <option value="sec">SEC</option>
+                  <option value="sr.sec">SR.SEC</option>
+                  <option value="none">NONE</option>
+                  </select></div>
+                
+                <br />
+                <div class="input-box"><lable for="describe" id="describe"><br>
+                  <textarea id="comments" class="input-textarea" name="comment"  maxlength="50" autocomplete="off" rows="6" required="required"></textarea><span>DESCRIBE</span></lable></div>
+                
+                    <br />
                     
-                  <div id="Registrationform"><fieldset>
-                        <legend>Contract Details</legend> 
-                        <lable for="Email Id" id="email">EMAIL ID</lable><br>
-                        <input type="email" placeholder="enter your mail id" name="mail" id="email"><br>
-                        <lable for="mobile no" id="mob">MOBILE NO</lable><br>
-                        <input type="tel" placeholder="enter mobile no" name="mob" id="mob" maxlength="13">
-                        </fieldset>
-                     </div> 
-                         <div id="Registrationform"><fieldset>
-                         <legend>About</legend>
-                             <p>EDUCATION</p>
-                             <select id="most-like" name="mostLike" class="form-control" required="">
-                              <option disabled="" selected="" value="">Select an option</option>    
-                              <option value="sec">SEC</option>
-                              <option value="sr.sec">SR.SEC</option>
-                              <option value="none">NONE</option>
-                                </select>
-                                 <br>
-                                <lable for="describe" id="describe">DESCRIBE</lable><br>
-                                <textarea id="comments" class="input-textarea" name="comment" placeholder="describe yourself here..." maxlength="50" autocomplete="off" rows="6"></textarea><br>
-                                <p>KNOWN LANGAUGES</p>
-                                <lable><input type="checkbox" name="prefer" class="input-checkbox">JAVA</lable>
-                                <lable><input type="checkbox" name="prefer" class="input-checkbox">C</lable>
-                                <lable><input type="checkbox" name="prefer" class="input-checkbox">NODE</lable>
-                                <lable><input type="checkbox" name="prefer" class="input-checkbox">HTML</lable>
-                                <lable><input type="checkbox" name="prefer" class="input-checkbox">CSS</lable>
-                                <lable><input type="checkbox" name="prefer" class="input-checkbox">JAVA SCRIPT</lable>
-                                <lable><input type="checkbox" name="prefer" class="input-checkbox">PHP</lable>
-                                <lable><input type="checkbox" name="prefer" class="input-checkbox">REACT</lable>
-                            </fieldset>
-                           </div>
-                        <div id="submit-button">   
-                    <button type="submit" class="submit-button" id="submit">SUBMIT</button></div>               
-         
+                    <span class="lang" >Known LANGAUGES</span>
+                    <br />
+                    <br />
+                    <div class="check">
+                    <div class="checkbox-container">
+                    <input type="checkbox" name="prefer" class="input__checkbox"><span class="mark"></span><lable class="lable__checkbox"><span>JAVA</span></lable></div>
+                    <div class="checkbox-container">
+                    <input type="checkbox" name="prefer" class="input__checkbox"><span class="mark"></span><lable class="lable__checkbox"><span >C</span></lable></div>
+                    <div class="checkbox-container">
+                    <input type="checkbox" name="prefer" class="input__checkbox"><span class="mark"></span><lable class="lable__checkbox"><span>NODE</span></lable></div>
+                    <div class="checkbox-container">
+                    <input type="checkbox" name="prefer"class="input__checkbox"><span class="mark"></span><lable class="lable__checkbox"><span>HTML</span></lable></div>
+                    <div class="checkbox-container">
+                    <input type="checkbox" name="prefer" class="input__checkbox"><span class="mark"></span><lable class="lable__checkbox"><span>CSS</span></lable></div>
+                    <div class="checkbox-container">
+                    <input type="checkbox" name="prefer" class="input__checkbox"><span class="mark"></span><lable class="lable__checkbox"><span>JAVA SCRIPT</span></lable></div>
+                    <div class="checkbox-container">
+                    <input type="checkbox" name="prefer" class="input__checkbox"><span class="mark"></span><lable class="lable__checkbox"><span>PHP</span></lable></div>
+                    <div class="checkbox-container">
+                    <input type="checkbox" name="prefer" class="input__checkbox"><span class="mark"></span><lable class="lable__checkbox"><span>REACT</span></lable></div>
+                 </div>
+              <br />
+              <div class="svg-wrapper">
+                <svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
+                  <rect class="shape" height="60" width="320" />
+                  <div class="text" type="submit"><button>SUBMIT</button></div>
+                </svg>
+              </div>
+                <div id="submit-button">   
+                </div>               
+                        
                 </form>
             </div>
         </div>
      </div>
+    </main>
+    <script src="index.js"></script>
 </body>
 </html>
