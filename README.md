@@ -3,11 +3,6 @@ Registration Form
 
 ## Overview
 
-### Screenshot
-
-![mobile]()
-
-
 ### Links
 
 - Solution URL: [[Frontend Mentor](https://www.frontendmentor.io/solutions/-frontend-mentor-qr-code-component-solution-rkmc5CuL5#comment-62b15f2b38517877b39cb90a)]([https://your-solution-url.com](https://www.frontendmentor.io/solutions/-frontend-mentor-qr-code-component-solution-rkmc5CuL5#comment-62b15f2b38517877b39cb90a))
